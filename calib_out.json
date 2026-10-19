@@ -1,0 +1,40 @@
+{
+ "SIA": {
+  "mu": 801.3,
+  "sd": 1355.7511362797413,
+  "cv": 1.6919395186319,
+  "loss_years": 2,
+  "worst": -2512.5,
+  "worst_year": "FY20/21",
+  "latest_cov": 4.321365360303413,
+  "min_cov": -9.378499440089586,
+  "opt_k": 0.0,
+  "opt_cov": null,
+  "opt_gain": 0.0,
+  "opt_p": 0.0,
+  "alt_cov": null,
+  "alt_gain": 0.0,
+  "latest_debt": 12914.3,
+  "latest_cash": 8257.1,
+  "latest_interest": 395.5
+ },
+ "Sheng Siong": {
+  "mu": 161.1302,
+  "sd": 21.745879914469896,
+  "cv": 0.1349584368074383,
+  "loss_years": 0,
+  "worst": 46.506,
+  "worst_year": "2013",
+  "latest_cov": 35.80291479820628,
+  "min_cov": 35.80291479820628,
+  "opt_k": 0.6225,
+  "opt_cov": 1.6064257028112447,
+  "opt_gain": 11.939691693912774,
+  "opt_p": 0.0024399999999999977,
+  "alt_cov": 2.030456852791878,
+  "alt_gain": 8.532172289337934,
+  "latest_debt": 125.617,
+  "latest_cash": 353.363,
+  "latest_interest": 4.46
+ }
+}
