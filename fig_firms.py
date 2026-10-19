@@ -1,8 +1,7 @@
-"""Figure 5: operating profit and interest of SIA and Sheng Siong (firms.json)."""
+"""Figure E1: operating profit and interest of SIA and Sheng Siong (firms.json)."""
 import json, numpy as np
-import matplotlib; matplotlib.use("Agg")
 import matplotlib.pyplot as plt
-exec(open("figs.py").read().split("two_cf, two_p")[0])   # reuse style + helpers
+from style import ORANGE, RED, INK, MUTED, zero, save
 F = json.load(open("firms.json"))
 fig, ax = plt.subplots(1, 2, figsize=(6.6, 2.5))
 for a, (name, scale, unit) in zip(ax, [("SIA", 1000, "S$ bn"), ("Sheng Siong", 1, "S$ m")]):
@@ -21,9 +20,9 @@ for a, (name, scale, unit) in zip(ax, [("SIA", 1000, "S$ bn"), ("Sheng Siong", 1
         a.set_ylim(-3.0, 3.2); a.set_xlabel("Fiscal year ending March, 20xx")
     else:
         a.set_title("(b) Sheng Siong")
-        a.text(-0.4, 212, "No bank debt at year-end except 2020–21;\ninterest is lease interest (from 2019)", fontsize=6.5, color=INK, va="top")
+        a.text(-0.4, 212, "No bank debt; a S\\$30m government term loan\nin 2020–21; interest is lease interest (from 2019)", fontsize=6.5, color=INK, va="top")
         a.set_ylim(0, 215); a.set_xlabel("Year")
 h, l = ax[0].get_legend_handles_labels()
 fig.legend(h, l, loc="lower center", ncol=2, bbox_to_anchor=(0.5, -0.04), fontsize=7.5)
 fig.tight_layout(rect=(0, 0.06, 1, 1))
-fig.savefig("fig/fig6_firms.png", dpi=300, bbox_inches="tight", facecolor="white")
+save(fig, "figE1_firms", tight=False)
