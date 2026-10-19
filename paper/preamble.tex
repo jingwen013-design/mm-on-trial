@@ -63,7 +63,7 @@
 }
 
 % ---- let long URLs in the reference list break after / . - _
-\makeatletter\g@addto@macro{\UrlBreaks}{\do\-\do\_}\makeatother
+\makeatletter\g@addto@macro{\UrlBreaks}{\do\_}\g@addto@macro{\UrlSpecials}{\do\-{\penalty\UrlBreakPenalty\mbox{-}}}\makeatother
 \urlstyle{same}
 
 % ---- line spacing of Word's "single" for 11pt Times (about 12.65pt instead of LaTeX's 13.6pt)

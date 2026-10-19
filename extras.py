@@ -1,4 +1,4 @@
-"""Numbers quoted in the text that no other script prints (writes extras.json, a few seconds).
+"""Numbers quoted in the text that no other script prints (writes extras.json, about 30 seconds).
 
 Section 3.3  the money-machine trade with taxes (buy L's debt and equity, short U)
 Section 3.4  equity payoffs, CAPM beta ratio, Hamada multiplier, WACC, VaR reading of the optimum
@@ -87,4 +87,4 @@ for sd in (sd_obs / np.sqrt(2), sd_obs, 30.0):          # sqrt(2) correction, Ta
 
 json.dump(out, open("extras.json", "w"), indent=1)
 for key, val in out.items():
-    print(key, json.dumps(val, default=float)[:300])
+    print(key, json.dumps(val, default=float))

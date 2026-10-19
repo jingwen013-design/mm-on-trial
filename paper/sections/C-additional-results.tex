@@ -8,15 +8,15 @@
 \toprule
 $D$ & $\VL - \VU$, fixed rate & Lenders' loss, fixed rate & $\VL - \VU$, market-priced & Break-even rate \\
 \midrule
-40 & 0.73    & 0.00  & 0.73    & 10.0\% \\
-44 & 0.80    & 0.00  & 0.80    & 10.0\% \\
+40 & $\phantom{-}0.73$ & 0.00  & $\phantom{-}0.73$ & 10.0\% \\
+44 & $\phantom{-}0.80$ & 0.00  & $\phantom{-}0.80$ & 10.0\% \\
 45 & $-3.63$ & 4.72  & $-2.16$ & 29.9\% \\
 50 & $-3.55$ & 7.18  & $-1.32$ & 37.2\% \\
 55 & $-3.46$ & 9.65  & $-0.47$ & 43.3\% \\
-60 & $-3.38$ & 12.11 & 0.38    & 48.3\% \\
+60 & $-3.38$ & 12.11 & $\phantom{-}0.38$ & 48.3\% \\
 \bottomrule
 \end{tabularx}
-\tablenote{\textit{Notes:} Beyond the debt limit only the strong state services the debt, so the promised coupon rises sharply; because that coupon is deductible in the strong state, market pricing moderates the fall in value. This is an artefact of the two-state model; in the lognormal model (Table~\ref{tab:C2}) the two pricing rules give similar firm values up to $D = 50$.}
+\tablenote{\textit{Notes:} Beyond the debt limit only the strong state services the debt, so the promised coupon rises sharply; because that coupon is deductible in both states (in the weak state although it is never paid), market pricing moderates the fall in value and at $D = 60$ even makes it a gain. This is an artefact of the two-state model; in the lognormal model (Table~\ref{tab:C2}) the two pricing rules give similar firm values up to $D = 50$.}
 \end{table}
 
 \begin{table}[htbp]\centering\footnotesize
@@ -25,12 +25,12 @@ $D$ & $\VL - \VU$, fixed rate & Lenders' loss, fixed rate & $\VL - \VU$, market-
 \toprule
 $D$ & $\VL - \VU$, fixed & P(default), fixed & Shareholders' gain, fixed & $\VL - \VU$, market & Break-even rate & P(default), market \\
 \midrule
-20 & 0.36    & 0.0\%  & 0.36 & 0.36    & 10.0\% & 0.0\%  \\
-30 & 0.53    & 0.3\%  & 0.55 & 0.53    & 10.1\% & 0.3\%  \\
-34 & 0.56    & 1.0\%  & 0.65 & 0.57    & 10.3\% & 1.0\%  \\
-35 & 0.55    & 1.3\%  & 0.68 & 0.57    & 10.4\% & 1.4\%  \\
-40 & 0.43    & 4.1\%  & 0.89 & 0.51    & 11.4\% & 4.4\%  \\
-45 & 0.05    & 9.6\%  & 1.31 & 0.19    & 13.8\% & 11.5\% \\
+20 & $\phantom{-}0.36$ & 0.0\%  & 0.36 & $\phantom{-}0.36$ & 10.0\% & 0.0\%  \\
+30 & $\phantom{-}0.53$ & 0.3\%  & 0.55 & $\phantom{-}0.53$ & 10.1\% & 0.3\%  \\
+34 & $\phantom{-}0.56$ & 1.0\%  & 0.65 & $\phantom{-}0.57$ & 10.3\% & 1.0\%  \\
+35 & $\phantom{-}0.55$ & 1.3\%  & 0.68 & $\phantom{-}0.57$ & 10.4\% & 1.4\%  \\
+40 & $\phantom{-}0.43$ & 4.1\%  & 0.89 & $\phantom{-}0.51$ & 11.4\% & 4.4\%  \\
+45 & $\phantom{-}0.05$ & 9.6\%  & 1.31 & $\phantom{-}0.19$ & 13.8\% & 11.5\% \\
 50 & $-0.66$ & 18.0\% & 2.06 & $-0.58$ & 19.3\% & 25.0\% \\
 55 & $-1.68$ & 28.5\% & 3.29 & $-2.19$ & 32.5\% & 49.9\% \\
 \bottomrule
@@ -39,7 +39,7 @@ $D$ & $\VL - \VU$, fixed & P(default), fixed & Shareholders' gain, fixed & $\VL 
 \end{table}
 
 \begin{figure}[htbp]\centering
-\includegraphics[width=14.2cm]{figC1_market_debt}
+\includegraphics[width=\linewidth]{figC1_market_debt}
 \caption{Market-priced debt in the lognormal model. (a) Value gain under fixed-rate and break-even pricing, and the gain perceived by shareholders under a fixed rate. (b) Borrowing rate at which lenders break even.}\label{fig:C1}
 \end{figure}
 
@@ -47,6 +47,8 @@ $D$ & $\VL - \VU$, fixed & P(default), fixed & Shareholders' gain, fixed & $\VL 
 \caption{Usable share of the statutory tax shield (\%), by interest coverage}\label{tab:C3}
 \begin{tabularx}{\linewidth}{@{}l*{7}{C}@{}}
 \toprule
+ & \multicolumn{7}{c}{Interest coverage, $\Ex[\text{EBIT}]/\text{interest}$} \\
+\cmidrule(l){2-8}
 EBIT volatility & 1  & 1.5 & 2  & 3   & 3.33 & 5   & 10  \\
 \midrule
 0.28            & 89 & 98  & 99 & 100 & 100  & 100 & 100 \\

@@ -30,8 +30,8 @@ Below $\Dstar$ every unit of debt adds shield (Table~\ref{tab:twostate}). At $D 
 \toprule
 Debt $D$ & Weak-state after-tax cash & Promised repayment & Weak state defaults & $\VL - \VU$ \\
 \midrule
-40 & 48.80 & 44.00 & No  & $0.73$  \\
-44 & 48.88 & 48.40 & No  & $0.80$  \\
+40 & 48.80 & 44.00 & No  & $\phantom{-}0.73$  \\
+44 & 48.88 & 48.40 & No  & $\phantom{-}0.80$  \\
 45 & 48.90 & 49.50 & Yes & $-3.63$ \\
 50 & 49.00 & 55.00 & Yes & $-3.55$ \\
 \bottomrule
@@ -43,7 +43,7 @@ Debt $D$ & Weak-state after-tax cash & Promised repayment & Weak state defaults 
 \caption{Value of debt financing. (a) Two-state model: the gain rises to 0.81 at $\Dstar = 44.4$ and then collapses. (b) Lognormal cash flow with mean 90 and standard deviation 25 (200,000 draws), all other assumptions unchanged: the value function has an interior optimum near $D = 34$. (c) Default probability in the lognormal model. Dashed lines in (b) and (c) use a standard deviation of 30.}\label{fig:value}
 \end{figure}
 
-\textbf{Where the money machine breaks down.} Rerun the trade of Lecture~1 (pp.~48, 60) with taxes: buy all of L's debt and equity and short U. At $D = 40$ it pays $+0.8$ in both states, so if the market priced L at $\VU = 65.45$ it would be a riskless money machine whose counterparty is the tax authority. Homemade leverage cannot copy it, because interest paid by an investor does not reduce the firm's tax bill; the law of one price survives and prices the shield, bidding $\VL$ up to $\VU + 0.8/1.1 = 66.18$, which is \eqref{eq:shield}. Borrowing more to collect more shield stops at $\Dstar = 44.4$: at $D = 45$ the weak state defaults and loses 9.78 of its 48.9 of cash, and the position pays $+0.90$ in the strong state but $-8.88$ in the weak one, worth $-3.63$. Without distress costs it would stay riskless beyond $\Dstar$ (Section~\ref{sec:sens}), so it is costly default, not the debt limit itself, that switches the machine off.
+\textit{Where the money machine breaks down.} Rerun the trade of Lecture~1 (pp.~48, 60) with taxes: buy all of L's debt and equity and short U. At $D = 40$ it pays $+0.8$ in both states, so if the market priced L at $\VU = 65.45$ it would be a riskless money machine whose counterparty is the tax authority. Homemade leverage cannot copy it, because interest paid by an investor does not reduce the firm's tax bill; the law of one price survives and prices the shield, bidding $\VL$ up to $\VU + 0.8/1.1 = 66.18$, which is \eqref{eq:shield}. Borrowing more to collect more shield stops at $\Dstar = 44.4$: at $D = 45$ the weak state defaults and loses 9.78 of its 48.9 of cash, and the position pays $+0.90$ in the strong state but $-8.88$ in the weak one, worth $-3.63$. Without distress costs it would stay riskless beyond $\Dstar$ (Section~\ref{sec:sens}), so it is costly default, not the debt limit itself, that switches the machine off.
 
 \subsection{Reading the result with the course toolkit}\label{sec:toolkit}
 

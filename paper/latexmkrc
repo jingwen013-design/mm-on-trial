@@ -1,2 +1,4 @@
 $pdf_mode = 1;
 $pdflatex = 'pdflatex -interaction=nonstopmode -file-line-error %O %S';
+$ENV{SOURCE_DATE_EPOCH} = 1792396800;   # 19 Oct 2026 08:00 UTC: reproducible PDF dates and ID
+$ENV{FORCE_SOURCE_DATE} = 1;
