@@ -89,7 +89,7 @@ a.plot(D1[m], fx[m], color=BLUE, label=r"$V_L - V_U$, fixed 10% rate")
 a.plot(D1[m], mk[m], color=ORANGE, ls="--", label=r"$V_L - V_U$, market-priced debt")
 a.plot(D1[m], (fx + loss)[m], color=RED, ls="-.", label="Shareholders' gain, fixed rate")
 a.set_title("(a) Value gain under two pricing rules"); a.set_xlabel(r"Debt raised $D$"); a.set_ylabel("Gain relative to all-equity firm")
-a.legend(loc="lower left"); a.set_ylim(-3.5, 5.5)
+a.legend(loc="lower left"); a.set_ylim(-4.2, 5.5)
 a = ax[1]
 a.plot(D1[m], 100 * rate[m], color=ORANGE)
 for D in (35, 45, 50, 55):

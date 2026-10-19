@@ -1,0 +1,19 @@
+% ---------------------------------------------------------------- Appendix B
+\section{Derivations}\label{app:B}
+
+\textit{Tax shield.} Interest $\rD D$ is deducted before tax, so tax falls by $\tauc \rD D$ in every state with positive taxable income. Received at date 1, the saving is worth $\tauc \rD D/(1 + r)$; with $\tauc = 20\%$, $\rD = r = 10\%$ and $D = 40$ this is $0.8/1.1 = 0.727$.
+
+\textit{Debt capacity.} Weak-state after-tax cash is $X_{\mathrm{w}} - \tauc(X_{\mathrm{w}} - \rD D)$. Equating it to $(1 + \rD)D$ gives~\eqref{eq:dstar}. The same expression with other parameters gives the limits reported in Section~\ref{sec:robust}.
+
+\textit{Market-priced debt.} For each $D$, $F$ solves $\Ex[\min(F, A)$ in solvent states; $(1 - c)A$ in default$]/(1 + r) = D$, with deductible interest $F - D$; the break-even rate is $F/D - 1$. Under a fixed rate, shareholders' gain from borrowing $D$ is $\VL - \VU + (D - V_{\mathrm{debt}})$, where the second term is the lenders' loss.
+
+\textit{Usable shield.} With EBIT $\sim \mathrm{N}(\mu, (v\mu)^2)$ and interest $I = \mu/k$ (coverage $k$), the saving is $\tauc \min(I,\allowbreak \max(\mathrm{EBIT}, 0))$ without carry-forward and $\tauc \min(I, 0.3 \max(\mathrm{EBIT}, 0))$ under a 30\%-of-EBIT cap. We report $\Ex[\text{saving}]/(\tauc I)$ from 300,000 draws (150,000 for Figure~\ref{fig:usable}a).
+
+\textit{Personal taxes.} One unit of interest delivers $1 - \tauD$ to a lender, whereas the same pre-tax unit paid to shareholders delivers $(1 - \tauc)(1 - \tauE)$; the difference relative to $1 - \tauD$ gives~\eqref{eq:miller}.
+
+\textit{Multi-period model.} EBIT is independently and identically distributed across years and $\VU = (1 - \tauc)\Ex[\mathrm{EBIT}]/r$. The firm issues perpetual debt $D$ with annual coupon $I = rD$ and defaults in the first year in which after-tax cash does not cover $I$ (equivalently EBIT $< I$ without a cap), which occurs with probability $p$ each year. At default the firm loses $c\VU$ and continues unlevered. Summing the expected shield in solvent years and the expected distress cost over all years gives
+\begin{equation}
+  \VL - \VU = \frac{\Ex[\text{shield} \times \ind\{\text{solvent}\}] - pc\VU}{r + p},
+  \label{eq:B1}
+\end{equation}
+which reduces to~\eqref{eq:perp} without a cap and to $\tauc D$ when $p = 0$. Table~\ref{tab:tcja} uses a simulated version, with or without a 30\% interest cap; Section~\ref{sec:calib} draws EBIT from a normal rather than a lognormal distribution.

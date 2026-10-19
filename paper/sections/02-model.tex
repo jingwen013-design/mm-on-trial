@@ -1,0 +1,11 @@
+% ---------------------------------------------------------------- 02-model.tex
+\section{Model}\label{sec:model}
+
+We use the two-state firm of Lecture~1 (pp.~9, 47) in a one-period economy. Operating cash flow (EBIT) next year is $X_s \in \{120, 60\}$ in the strong and weak state, each with probability 0.5; the firm then liquidates. All claims are valued at their expected payoff discounted at $r = 10\%$. We treat $r$ as the risk-free rate and 0.5/0.5 as risk-neutral probabilities, which is why debt, equity and the tax shield can all be discounted at 10\% even though equity is riskier (Section~\ref{sec:toolkit}). In the benchmark there are no frictions. The assumption on trial is the absence of corporate tax: the firm pays corporate tax at rate $\tauc = 20\%$ on EBIT less interest, interest is deductible, also in a default year, but principal is not, and there is no loss carry-forward.
+
+The firm borrows $D$ at date 0 at a fixed rate $\rD = 10\%$ and promises $F = (1 + \rD)D$ at date 1. After-tax cash in state $s$ is $A_s = X_s - \tauc \max(X_s - \rD D, 0)$. If $A_s < F$ the firm defaults and a fraction $c = 20\%$ of $A_s$ is lost to distress (legal costs, fire sales, lost customers). Distress costs are a supporting assumption, not a second defendant: they only explain why a taxed firm would not borrow without limit, and they never create value. Firm values are
+\begin{equation}
+\VU = \frac{\Ex[(1 - \tauc)X]}{1 + r}, \qquad \VL = \frac{\Ex[A - cA \cdot \ind\{A < F\}]}{1 + r}. \label{eq:values}
+\end{equation}
+
+Because the cash flows, the investment policy and the discount rate never change, any change in value is attributable to financing. All parameter values are illustrative; Appendix~\ref{app:A} lists them and Appendix~\ref{app:B} gives the derivations.

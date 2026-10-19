@@ -1,0 +1,82 @@
+% ---------------------------------------------------------------- preamble.tex
+\usepackage[T1]{fontenc}
+\usepackage{newtxtext,newtxmath}           % Times, as in the Word version
+\usepackage[a4paper,margin=2cm]{geometry}
+\usepackage{microtype}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\graphicspath{{../fig/}}   % figures come straight from the code (figs.py, fig_firms.py)
+\usepackage{booktabs,tabularx,array}
+\usepackage{caption}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage{xcolor}
+\usepackage{soul}
+\usepackage[round]{natbib}
+\usepackage[colorlinks=true,linkcolor=blue!45!black,citecolor=blue!45!black,urlcolor=blue!45!black]{hyperref}
+
+% ---- captions: "Table 1." / "Figure 1." in bold, small, justified
+\captionsetup{font=small,labelfont=bf,labelsep=period,justification=justified,singlelinecheck=false,skip=4pt}
+\captionsetup[table]{position=top}
+
+% ---- headings: "1  Introduction" bold; "3.1  The no-tax benchmark" bold italic
+\titleformat{\section}{\normalfont\large\bfseries}{\thesection}{1em}{}
+\titleformat{\subsection}{\normalfont\normalsize\bfseries\itshape}{\thesubsection}{1em}{}
+\titlespacing*{\section}{0pt}{2.0ex plus .5ex minus .2ex}{1.0ex plus .2ex}
+\titlespacing*{\subsection}{0pt}{1.4ex plus .4ex minus .2ex}{0.6ex plus .2ex}
+
+% ---- bibliography
+\setlength{\bibsep}{1.5pt plus 0.3ex}
+\setlength{\bibhang}{1.5em}
+\renewcommand{\bibfont}{\small}
+
+% ---- symbols (italic variable, upright label subscript, as in the Word version)
+\newcommand{\VL}{V_{\mathrm{L}}}
+\newcommand{\VU}{V_{\mathrm{U}}}
+\newcommand{\tauc}{\tau_{\mathrm{c}}}
+\newcommand{\tauD}{\tau_{\mathrm{D}}}
+\newcommand{\tauE}{\tau_{\mathrm{E}}}
+\newcommand{\rD}{r_{\mathrm{D}}}
+\newcommand{\Dstar}{D^{*}}
+\newcommand{\Tstar}{T^{*}}
+\newcommand{\betaE}{\beta_{\mathrm{E}}}
+\newcommand{\betaU}{\beta_{\mathrm{U}}}
+\newcommand{\Ex}{\mathrm{E}}
+\newcommand{\ind}{\mathbf{1}}
+
+% ---- table notes and placeholders
+\newcommand{\tablenote}[1]{\par\vspace{3pt}\begin{minipage}{\linewidth}\footnotesize #1\end{minipage}}
+\newcommand{\placeholder}[1]{\hl{#1}}
+\newcolumntype{L}{>{\raggedright\arraybackslash}X}
+\newcolumntype{C}{>{\centering\arraybackslash}X}
+
+% ---- appendices: "Appendix A  Assumptions"; Table A1, Figure C1, equation (B1)
+\newcommand{\appendixsetup}{%
+  \appendix
+  \titleformat{\section}{\normalfont\large\bfseries}{Appendix \thesection}{1em}{}%
+  \renewcommand{\thetable}{\thesection\arabic{table}}%
+  \renewcommand{\thefigure}{\thesection\arabic{figure}}%
+  \renewcommand{\theequation}{\thesection\arabic{equation}}%
+  \counterwithin*{table}{section}%
+  \counterwithin*{figure}{section}%
+  \counterwithin*{equation}{section}%
+}
+
+% ---- let long URLs in the reference list break after / . - _
+\makeatletter\g@addto@macro{\UrlBreaks}{\do\-\do\_}\makeatother
+\urlstyle{same}
+
+% ---- line spacing of Word's "single" for 11pt Times (about 12.65pt instead of LaTeX's 13.6pt)
+\linespread{0.93}
+
+% ---- float spacing closer to the Word layout (LaTeX's defaults leave about 20pt around each float)
+\setlength{\textfloatsep}{12pt plus 2pt minus 2pt}
+\setlength{\floatsep}{10pt plus 2pt minus 2pt}
+\setlength{\intextsep}{10pt plus 2pt minus 2pt}
+\renewcommand{\topfraction}{0.85}
+\renewcommand{\bottomfraction}{0.6}
+\renewcommand{\textfraction}{0.1}
+\renewcommand{\floatpagefraction}{0.8}
+
+\setlength{\emergencystretch}{1.5em}
+\frenchspacing

@@ -1,0 +1,60 @@
+% ---------------------------------------------------------------- 06-applications.tex
+\section{Applications}\label{sec:apps}
+
+\subsection{The 2017 US Tax Cuts and Jobs Act}\label{sec:tcja}
+
+The Tax Cuts and Jobs Act (TCJA) changed precisely the assumption under examination. It reduced the federal corporate rate from 35\% to 21\% for tax years beginning after 2017 and, through Section~163(j), limited net business interest deductions to 30\% of adjusted taxable income (temporarily 50\% for 2019--2020 under the CARES Act), defined approximately as EBITDA in 2018--2021 and as EBIT in 2022--2024, with disallowed interest carried forward \citep{gale2018,irs2025,irs2026}. The One Big Beautiful Bill Act of 2025 restored the EBITDA-based definition for tax years beginning after 31 December 2024 \citep{irs2026}; the cut in the top individual rate on interest income from 39.6\% to 37\% came from the TCJA itself in 2018 and was made permanent by the 2025 Act.
+
+Table~\ref{tab:tcja} introduces these changes into the multi-period model of Section~\ref{sec:multi} and yields three predictions. First, the rate cut reduces the value that debt adds by about 40\% (from 137 to 79 for the stable firm, or from 23.4\% to 11.1\% of a $\VU$ that itself rises from 585 to 711) but has a much smaller effect on how much a firm should borrow: optimal debt falls by about 3\% (13\% for the volatile firm), because the optimum is determined more by how quickly default risk rises in bad years than by the tax rate. Second, the interest cap is what reduces borrowing: on its own it lowers optimal debt by about a third and raises optimal interest coverage from 2.1 to 3.1, because interest above 30\% of EBIT earns no shield and the extra tax makes default more likely (Section~\ref{sec:usable}). Since our cap is based on EBIT, the stricter 2022--2024 rule, and disallowed interest is lost rather than carried forward, a reduction of one third should be read as an upper bound. Third, at the investor level, the net advantage for a top-bracket individual fell from 12.5\% to slightly below zero ($-1.7\%$) (Table~\ref{tab:personal}).
+
+The empirical evidence is broadly consistent with these predictions, though not unanimous. \citet{carrizosa2023} find that firms constrained by the interest limitation reduced leverage by 7.6\% of assets relative to unconstrained firms, mainly by issuing less new long-term debt. Using a regression discontinuity around the \$25 million small-business exemption, \citet{sanati} find that corporate debt declines significantly as the tax benefits of debt shrink, while equity does not increase enough to offset the reduction. Using IRS tax-return data, \citet{goodman2023} find no economically significant effect on leverage. All three studies examine the interest cap rather than the rate cut, which is where our model locates the effect on the quantity of debt.
+
+\begin{table}[htbp]\centering\footnotesize
+\caption{The TCJA in the multi-period model}\label{tab:tcja}
+\begin{tabularx}{\linewidth}{@{}l*{6}{C}@{}}
+\toprule
+ & \multicolumn{3}{c}{EBIT volatility 0.28} & \multicolumn{3}{c}{EBIT volatility 0.56} \\
+\cmidrule(lr){2-4}\cmidrule(l){5-7}
+Tax regime & Coverage & Debt index & \begin{tabular}[b]{@{}c@{}}Gain\\(\% of $\VU$)\end{tabular} & Coverage & Debt index & \begin{tabular}[b]{@{}c@{}}Gain\\(\% of $\VU$)\end{tabular} \\
+\midrule
+Before TCJA: 35\%, no cap          & 2.1 & 100 & 23.4 & 4.0 & 100 & 10.9 \\
+Rate cut only: 21\%                & 2.1 & 97  & 11.1 & 4.6 & 87  & 4.8 \\
+Interest cap only: 35\% + 30\% cap & 3.1 & 68  & 14.4 & 5.9 & 67  & 7.5 \\
+After TCJA: 21\% + 30\% cap        & 2.9 & 72  & 7.3  & 5.9 & 67  & 3.8 \\
+\bottomrule
+\end{tabularx}
+\tablenote{\textit{Notes:} The first three numerical columns refer to EBIT volatility 0.28 (our firm) and the last three to volatility 0.56. Coverage is mean EBIT over interest at the optimum; optimal debt is indexed to the pre-TCJA level (= 100). Distress cost 20\% of $\VU$, discount rate 10\%, lognormal EBIT. All rows are simulated with the same 400,000 draws; because the optimum is flat, differences of a few index points are not meaningful.}
+\end{table}
+
+\subsection{The Singapore tax system and S-REITs}\label{sec:sg}
+
+Singapore's corporate tax rate of 17\% is one of our sensitivity cases; in the one-period model it moves the debt limit to $\Dstar = 46.0$, with a maximum gain of about 1.0\% of $\VU$. Singapore is distinctive at the investor level. Dividends from resident companies are exempt under the one-tier system, capital gains are generally untaxed, and individuals are exempt on interest from approved banks and from debt securities \citetext{Income Tax Act s13(1); \citealp{deloitte2025}}. With $\tauD = \tauE = 0$, Miller's $\Tstar$ equals $\tauc$, so that, unlike in the United States, the corporate shield is passed to investors in full. Interest is deductible when the borrowing produces income, there are no thin-capitalisation or EBITDA-based interest caps, and unused losses can be carried forward indefinitely subject to a shareholding test \citep{pwc2025,deloitte2025}. The frictions of Section~\ref{sec:usable} are therefore weak: a loss year defers the shield rather than eliminating it. In the multi-period model a Singapore firm like ours should borrow up to an interest coverage of 2.2 and gains 8.4\% of value (3.6\% if EBIT volatility doubles).
+
+Singapore real estate investment trusts (S-REITs) are our real-world attribution test. A REIT that distributes at least 90\% of its taxable income is not taxed on the amount distributed, and individual unitholders are generally exempt on the distributions \citep{iras_reit}. With almost no tax at either level, our model implies that debt has no tax value, as in Proposition~I. S-REITs nevertheless borrow about 40\% of their assets \citetext{sector average gearing reported by SGX in July 2025; \citealp{sgx2025}}, so observed leverage on its own is not evidence of a tax benefit; their borrowing must be explained by other considerations, such as funding acquisitions without issuing new units. Regulation looks like a blunt version of our debt limit but is a different constraint. Since 28 November 2024 MAS has capped aggregate leverage at 50\% and required an interest coverage ratio of at least 1.5, measured on trailing twelve-month EBITDA \citep{mas2024}. That ratio looks backward at reported earnings rather than forward at the worst state that sets $\Dstar$ in our model, and it protects creditors rather than trading off a tax shield. The April 2020 episode points the same way: when COVID-19 cut rental income, MAS raised the leverage limit from 45\% to 50\% and deferred to 1~January 2022 a planned minimum interest coverage of 2.5$\times$ for REITs borrowing above 45\% \citep{mas2020}. The regulator relaxed the constraint in the weak state instead of enforcing it, the opposite of our model's hard stop and closer to how SIA was rescued (Section~\ref{sec:calib}).
+
+\subsection{Calibration to two Singapore-listed firms}\label{sec:calib}
+
+Finally, we calibrate the multi-period model to reported cash flows. We collected operating profit and interest expense from the full-year results of Singapore Airlines (SIA, FY2009/10--FY2024/25) and Sheng Siong Group (2013--2024), shown in Figure~\ref{fig:E1} (Appendix~\ref{app:E}). For each firm, next year's EBIT is drawn from a normal distribution centred on its average over the last five years, with a standard deviation equal to that of its year-on-year changes. We use changes rather than levels because both series trend over time. Neither measure is ideal: if EBIT is independent across years, changes overstate its dispersion by a factor of about $\sqrt{2}$, and for Sheng Siong they are further inflated by the 2020 jump. For EBIT volatility between S\$15m (the year-on-year measure divided by $\sqrt{2}$) and a conservative S\$30m, Sheng Siong's optimal coverage ranges from 1.4 to 2.0 and the gain from 14\% to 9\% of unlevered value. All other assumptions are those of the model: a 17\% tax rate, default when EBIT does not cover interest, and a distress cost of 20\% of value. Table~\ref{tab:firms} compares the model's prescription with each firm's actual financing.
+
+\begin{table}[htbp]\centering\footnotesize
+\caption{Model prescription and actual financing (S\$ million)}\label{tab:firms}
+\setlength{\tabcolsep}{4pt}%
+\begin{tabularx}{\linewidth}{@{}l>{\centering\arraybackslash\hsize=0.91\hsize}X>{\centering\arraybackslash\hsize=1.09\hsize}X@{}}
+\toprule
+ & Singapore Airlines & Sheng Siong \\
+\midrule
+Average EBIT, last five years & 801 & 161 \\
+Standard deviation of annual change in EBIT & 1,356 ($1.69 \times$ average) & 22 ($0.13 \times$ average) \\
+Loss years in sample & 2 of 16 & 0 of 12 \\
+Model: optimal interest coverage & No debt & 1.6 \\
+Model: gain at the optimum & 0\% & 11.9\% of $\VU$ (9--14\% across risk measures) \\
+Actual interest coverage, FY2024/25 / 2024 & 4.3 (FY2020/21: $-9.4$) & 36 (lease interest only) \\
+Actual debt and cash, 31 Mar 2025 / 31 Dec 2024 & Debt 12,914 incl.\ leases; cash 8,257 & No bank debt; leases 126; cash 353 \\
+\bottomrule
+\end{tabularx}
+\tablenote{\textit{Notes:} If EBIT is centred on the full-sample average, Sheng Siong's optimal coverage is 2.0 with a gain of 8.5\%; SIA's prescription is ``no debt'' under every centring considered.}
+\end{table}
+
+\textit{Singapore Airlines.} Taken literally, the model says SIA should not borrow at all. We read this as a property of our default rule rather than a finding about SIA: EBIT is negative in about 28\% of simulated years, and because the model firm holds no cash, even a token amount of debt defaults in each of them. SIA nonetheless carries about S\$12.9 billion of debt and lease liabilities. In FY2020/21, the weak state of our model, it made an operating loss of S\$2.5 billion against S\$0.27 billion of interest but did not default: a Temasek-backed rights issue and convertible bonds raised S\$8.8 billion \citetext{\citealp{sia2020}; details in Appendix~\ref{app:E}}. Distress was paid for through dilution rather than bankruptcy, a cost our proportional-distress assumption does not capture. SIA's borrowing rests on features the model omits: aircraft that serve as collateral, large cash reserves and a majority shareholder able to recapitalise the firm.
+
+\textit{Sheng Siong.} Sheng Siong's EBIT varies little from year to year, so the model would allow it to borrow until interest coverage is about 1.6, adding roughly 12\% to firm value. In fact the firm has no bank debt, S\$0.35 billion of cash and an interest coverage of 36 on lease interest alone. This is the debt-conservatism puzzle that \citet{graham2000} documents for large, profitable, low-risk firms. Our model prices taxes and distress only, and omits the value of spare borrowing capacity for expansion and the preferences of controlling shareholders. The model ranks the two firms as the trade-off theory predicts, giving the stable firm far more debt capacity than the volatile one, but their actual leverage is the reverse; taxes and distress costs alone cannot explain either choice. As with the joint-hypothesis problem of Lecture~3 (p.~25), the gap between prescription and practice tests the firms and our model together: collateral, cash buffers and a shareholder able to recapitalise must be worth more than our omitted terms allow.

@@ -80,9 +80,10 @@ sia = np.array(FIRMS["SIA"]["ebit"]); mu_s, sd_s = sia[-5:].mean(), np.diff(sia)
 out["sia_share_of_loss_years"] = float(norm.cdf(-mu_s / sd_s))
 ss = np.array(FIRMS["Sheng Siong"]["ebit"]); mu = ss[-5:].mean()
 out["sheng_siong_by_volatility"] = {}
-for sd in (16, 21.75, 30):
+sd_obs = np.diff(ss).std(ddof=1)
+for sd in (sd_obs / np.sqrt(2), sd_obs, 30.0):          # sqrt(2) correction, Table 4, conservative
     (k, g, p), _ = opt(mu, sd)
-    out["sheng_siong_by_volatility"][str(sd)] = dict(opt_cov=1 / k, gain_pct=g, p_default=p)
+    out["sheng_siong_by_volatility"][f"{sd:.2f}"] = dict(opt_cov=1 / k, gain_pct=g, p_default=p)
 
 json.dump(out, open("extras.json", "w"), indent=1)
 for key, val in out.items():
